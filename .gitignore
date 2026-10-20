@@ -76,5 +76,5 @@ docs/*/*/_build/
 docs/*/*/sphinx-warning-log.txt
 docs/*/*/sphinx-warning-log-sanitized.txt
 
-# Visual Studio Code settings
+# Visual Studio Code settings.json
 .vscode/
