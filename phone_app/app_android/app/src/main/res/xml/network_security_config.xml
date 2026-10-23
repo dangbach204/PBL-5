@@ -7,6 +7,7 @@
 
         <domain includeSubdomains="true">api.rainmaker.espressif.com</domain>
         <trust-anchors>
+            <certificates src="system" />
             <certificates src="@raw/rainmaker_ca" />
         </trust-anchors>
 
