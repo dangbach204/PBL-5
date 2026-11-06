@@ -134,6 +134,7 @@ android {
 
         debug {
             debuggable true
+            applicationIdSuffix ".dev"
         }
     }
 

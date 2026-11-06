@@ -27,8 +27,8 @@
 #include "app_storage.h"
 #include "app_priv.h"
 
-#define LIGHT_ESP_WIFI_SSID     "Noobs"
-#define LIGHT_ESP_WIFI_PASS     "duyhoang"
+#define LIGHT_ESP_WIFI_SSID     "Five Elders"
+#define LIGHT_ESP_WIFI_PASS     "15072004"
 #define LIGHT_ESP_MAXIMUM_RETRY 5
 
 /* The event group allows multiple bits for each event, but we only care about two events:

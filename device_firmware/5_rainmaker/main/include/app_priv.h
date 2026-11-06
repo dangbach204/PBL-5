@@ -15,81 +15,95 @@
 #ifndef __APP_PRIVATE_H__
 #define __APP_PRIVATE_H__
 
-#define DEFAULT_POWER       true
-#define DEFAULT_HUE         180
-#define DEFAULT_SATURATION  100
-#define DEFAULT_BRIGHTNESS  25
+#define DEFAULT_POWER true
+#define DEFAULT_HUE 180
+#define DEFAULT_SATURATION 100
+#define DEFAULT_BRIGHTNESS 25
+
+#define APP_LIGHT_EFFECT_STATIC "Static"
+#define APP_LIGHT_EFFECT_BREATHING "Breathing"
+#define APP_LIGHT_EFFECT_BLINK "Blink"
+#define APP_LIGHT_EFFECT_RAINBOW_WAVE "Rainbow Wave"
+#define APP_LIGHT_EFFECT_METEOR "Meteor"
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void app_driver_init(void);
 
 /**
- * @brief 
- * 
- * @param state 
- * @return int 
+ * @brief
+ *
+ * @param state
+ * @return int
  */
 int app_driver_set_state(bool state);
 
 /**
- * @brief 
- * 
- * @return true 
- * @return false 
+ * @brief
+ *
+ * @return true
+ * @return false
  */
 bool app_driver_get_state(void);
 
 /**
- * @brief 
- * 
- * @param hue 
- * @param saturation 
- * @param brightness 
- * @return esp_err_t 
+ * @brief
+ *
+ * @param hue
+ * @param saturation
+ * @param brightness
+ * @return esp_err_t
  */
 esp_err_t app_light_set(uint32_t hue, uint32_t saturation, uint32_t brightness);
 
 /**
- * @brief 
- * 
- * @param power 
- * @return esp_err_t 
+ * @brief
+ *
+ * @param power
+ * @return esp_err_t
  */
 esp_err_t app_light_set_power(bool power);
 
 /**
- * @brief 
- * 
- * @param brightness 
- * @return esp_err_t 
+ * @brief
+ *
+ * @param brightness
+ * @return esp_err_t
  */
 esp_err_t app_light_set_brightness(uint16_t brightness);
 
 /**
- * @brief 
- * 
- * @param hue 
- * @return esp_err_t 
+ * @brief
+ *
+ * @param hue
+ * @return esp_err_t
  */
 esp_err_t app_light_set_hue(uint16_t hue);
 
 /**
- * @brief 
- * 
- * @param saturation 
- * @return esp_err_t 
+ * @brief
+ *
+ * @param saturation
+ * @return esp_err_t
  */
 esp_err_t app_light_set_saturation(uint16_t saturation);
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  * @param  enable
- * @return esp_err_t 
+ * @return esp_err_t
  */
 esp_err_t app_light_set_dimming(bool enabled);
+
+esp_err_t app_light_set_blink(bool enabled);
+
+esp_err_t app_light_set_meteor(bool enabled);
+
+esp_err_t app_light_set_rainbow(bool enabled);
+
+esp_err_t app_light_select_effect(const char *effect);
 
 #endif /**< __APP_PRIVATE_H__ */
